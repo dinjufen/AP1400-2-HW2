@@ -3,8 +3,9 @@
 #include "gmock/gmock.h"
 #include "server.h"
 #include "client.h"
+#include "crypto.h"
+#include <iostream>
 
-/*
 TEST(HW1Test, TEST1) {
     Server server{};
     auto bryan{server.add_client("bryan")};
@@ -78,6 +79,7 @@ TEST(HW1Test, TEST10) {
     std::string sender{}, receiver{};
     double value;
     Server::parse_trx("sarah-clay-0.5", sender, receiver, value);
+    std::cout << "TEST10: " << sender << " receiver: " << receiver << " value:" << value << std::endl;
     EXPECT_EQ(sender, "sarah");
     EXPECT_EQ(receiver, "clay");
     EXPECT_DOUBLE_EQ(value, 0.5);
@@ -146,7 +148,6 @@ TEST(HW1Test, TEST15) {
     EXPECT_TRUE(clint->get_wallet()==3.5 ||clint->get_wallet()==3.5 ||clint->get_wallet()==9.75);
     EXPECT_TRUE(sarah->get_wallet()==13.25 || sarah->get_wallet()==7 || sarah->get_wallet()==7);
 }
-*/
 
 
 
